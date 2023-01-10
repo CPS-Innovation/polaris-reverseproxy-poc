@@ -1,5 +1,8 @@
 # Reverse proxy demo
 
+[![CI](https://github.com/CPS-Innovation/polaris-reverseproxy-poc/actions/workflows/ci.yaml/badge.svg)](https://github.com/CPS-Innovation/polaris-reverseproxy-poc/actions/workflows/ci.yaml) 
+[![Security Scanning](https://github.com/CPS-Innovation/polaris-reverseproxy-poc/actions/workflows/security.yml/badge.svg)](https://github.com/CPS-Innovation/polaris-reverseproxy-poc/actions/workflows/security.yml)
+
 Proof of concept reverse proxy configuration for proxying CMS classic and polaris for sharing cookie data
 
 Terraform config that runs a nginx in an azure app service to proxy traffic
