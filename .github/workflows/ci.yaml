@@ -17,6 +17,18 @@ jobs:
       - run: npm ci
       - run: npm test
 
+  lint-js:
+    name: JS tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.3.0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run lint
+
   terraform-lint:
     name: Terraform lint
     runs-on: ubuntu-latest
