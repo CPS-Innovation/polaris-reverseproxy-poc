@@ -16,3 +16,12 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm test
+
+  terraform-lint:
+    name: Terraform lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.3.0
+      - uses: docker://hashicorp/terraform
+        with: 
+          args: fmt -check -recursive -diff
