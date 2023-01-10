@@ -67,8 +67,8 @@ resource "azurerm_storage_container" "example" {
 }
 
 resource "azurerm_storage_blob" "nginx_config" {
-  name        = "nginx.conf.template"
-  content_md5 = md5(file("default.conf"))
+  name                   = "nginx.conf.template"
+  content_md5            = md5(file("default.conf"))
   storage_account_name   = azurerm_storage_account.example.name
   storage_container_name = azurerm_storage_container.example.name
   type                   = "Block"
